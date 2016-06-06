@@ -18,6 +18,9 @@ public class TripRecord {
     private Integer engineRpmMax = 0;
 
     private Integer speed = 0;
+    
+    // TOUT 06/06/2016
+    private Integer AirFuelRatio = 0;
 
     private String engineRuntime;
 
@@ -134,4 +137,19 @@ public class TripRecord {
             this.engineRuntime = value;
         }
     }
-}
+    
+    // TOUT 06/06/2016
+    
+       public Integer getAirFuelRatio() {
+        return AirFuelRatio;
+    }
+
+    public void setAirFuelRatio(int value) {
+        if (this.afr < value)
+            afr = value;
+    }
+
+    public void setAirFuelRatio(String value) {
+        getAirFuelRatio(Integer.parseInt(value));
+    }
+ }
